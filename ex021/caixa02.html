@@ -19,6 +19,7 @@
         nav {
             background-color: #494949;
             padding: 3px;
+            box-shadow: 4px 4px 3px 1px rgba(0, 0, 0, 0.452);/*Inset sombra dentro, Outset sombra fora(padrão), Horizontal, Vertical, Borrão, Espalhamento e Cor*/
         }
         nav > a {
             text-decoration: none;
@@ -33,6 +34,7 @@
             background-color: white;
             padding: 10px;
             margin: 10px;
+            border-radius: 10px 0px;
         }
         article {
             background-color: lightgray;
@@ -44,8 +46,18 @@
             background-color: black;
             color: white;
             text-align: center;
-            padding: 1px;
+            padding: 4px;
             margin: 0px;
+        }
+        footer > p {
+            margin: 0px;
+        }
+        div#bola {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -82,5 +94,6 @@
     <footer>
         <p>Desenvolvido pelo Cursoemvideo</p>
     </footer>
+    <div id="bola"></div>
 </body>
 </html>
