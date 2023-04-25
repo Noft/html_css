@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste Header</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
         :root {
             --cor0: #D6E0BE;
             --cor1: #DDA4AB;
@@ -13,6 +15,9 @@
             --cor3: #CB5666;
             --cor4: #757F5D;
             --cor5: #A5B287;
+
+            --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+            --fonte-conteudo: Raleway;
         }
         * {
             margin: 0px;
@@ -31,8 +36,9 @@
 
         header > h1 {
             color: var(--cor0);
-            text-align: justify;
+            text-align: center;
             text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            width: auto;
         }
 
         nav {
@@ -45,8 +51,8 @@
             display: inline-block;
             margin: 5px;
             padding: 10px;
-            color: var(--cor0);
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            color: var(--cor5);
+            text-shadow: -1px -1px 0 #0000008a, 1px -1px 0 #0000008a, -1px 1px 0 #0000008a, 1px 1px 0 #0000008a;
             text-decoration: none;
             border-top-right-radius: 5px;
             border-top-left-radius: 5px;
@@ -54,28 +60,97 @@
             top: 40px;
         }
 
+        nav > a:hover {
+            background: linear-gradient(2deg, rgba(0,0,0,1) 0%, rgba(117,127,93,1) 36%, rgba(165,178,135,1) 70%, rgba(214,224,190,1) 100%);
+            color: var(--cor1);
+            transition: 0.5s;
+        }
+
         /*Fazer um hover invertendo a palheta de cores do texto com o bakground mantendo efeito de gradiente*/
 
         main {
-            background-color: #000;
+            background-color: var(--cor2);
+            background-image: url(imagens/fundo2.jpeg);
+            background-attachment: fixed;
+            /*background-size: 1350px 900px;*/
+            background-size: 1320px 880px;
+            background-position: center;
             margin: auto;
-            margin-bottom: 10px;
+        }
+
+        article {
+            background-color: #000;
+            max-width: 800px;
+            min-width: 300px;
+            height: 100%;
+            margin: auto;
+            border-top: var(--cor0) solid;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.511);
+        }
+
+        div {
+            margin: auto;
+            padding: 0px;
+            width: 800px;
+            height: auto;
+        }
+
+        div h2 {
+            margin: 10px;
+            padding: 5px;
+            text-align: justify;
+            font-family: var(--fonte-conteudo);
+            font-weight: 400;
+            background-image: linear-gradient(to right, var(--cor3), var(--cor1),#0000006b);
+        }
+
+        div p {
+            margin: 10px;
+            text-align: justify;
+            text-indent: 50px;
+            font-family: var(--fonte-conteudo);
+            font-weight: thin;
+            width: 480px;
+            background-color: var(--cor2);
+            background-size: auto 300px;
+            border-radius: 5px;
             padding: 10px;
+            box-shadow: 1px 1px 2px rgba(221,164,171,1);
         }
 
-        div > h1 {
-            color: var(--cor0);
+        div.intro {
+            width: auto;
+            height: 150px;
+            padding: 20px;
+        }
+
+        div.intro > h1 {
+            color: black;
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+            width: 250px;
+            height: 50px;
+            font-family: Raleway, Arial, Verdana, Helvetica, sans-serif;
+            font-weight: bold;
+            background-color: #F1DDDFd7;
+            border-radius: 5px;
+        }
+
+        div.intro > p {
+            color: black;
             text-align: justify;
-            margin: 5px;
+            margin: 10px auto 5px;
+            padding: 10px;
+            font-family: Raleway, Arial, Verdana, Helvetica, sans-serif;
+            font-weight: normal;
+            background-color: #F1DDDFd7;
+            text-indent: 20px;
         }
 
-        div > p {
-            color: var(--cor0);
-            text-align: justify;
-            margin: 10px 5px 20px 5px;
-        }
-
-        div > h1::after {
+        div.intro > h1::after {
             background-image: url(imagens/flortitulo.png);
             background-size: 25px 32px;
             display: inline-block;
@@ -85,7 +160,7 @@
             content: "";
         }
 
-        div > h1::before {
+        div.intro > h1::before {
             background-image: url(imagens/flortitulo.png);
             background-size: 25px 32px;
             display: inline-block;
@@ -95,24 +170,67 @@
             content: "";
         }
 
-        h2 {
-            color: var(--cor0);
+        div img {
+            width: 500px;
+            height: 333px;
+            margin: auto auto auto 10px;
+            position: relative;
+            border-radius: 5px;
         }
 
-        article > p {
-            display: block;
-            background-color: rgb(255, 255, 255);
+        div img.imgter {
+            width: 240px;
+            height: 320px;
             border-radius: 5px;
-            padding: 5px;
-            text-indent: justify;
-            max-width: 500px;
+            margin: auto auto 5px 10px;6
+        }
+
+        /*div.pri p::before {
+            background-image: url(imagens/pexels-eleonora-sky-12168839.jpg);
+            background-size: 200px 133px;
+            display: inline-block;
+            width: 200px;
+            height: 133px;
+            margin-left: 10px;
+            content: "";
+            text-indent: 20px;
+        }*/
+
+        /*div.seg p::after {
+            background-image: url(imagens/pexels-amina-filkins-5414032.jpg);
+            background-size: 200px 133px;
+            display: inline-block;
+            width: 200px;
+            height: 133px;
+            margin-left: 10px;
+            content: "";
+            text-indent: 20px;
+        }*/
+
+        /*div.ter p::before {
+            background-image: url(imagens/pexels-studio-naae-8537452.jpg);
+            background-size: 200px 267px;
+            display: inline-block;
+            width: 200px;
+            height: 267px;
+            margin-left: 10px;
+            content: "";
+            text-indent: 20px;
+        }*/
+
+        h2 {
+            color: var(--cor0);
+            font-family: Raleway;
+            font-weight: bold;
         }
 
         footer {
             background-color: #000;
             color: var(--cor0);
-            padding: 20px;
+            padding: 15px;
             text-align: center;
+            margin: auto;
+            border-top: var(--cor0) solid;
         }
 
         strong {
@@ -140,26 +258,34 @@
             <a href="#">Fale Conosco</a>
         </nav>
     </header>
+
     <main>
+        <div class="intro">
+            <h1>Introdução</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum quasi consectetur rem veniam rerum temporibus?</p>
+        </div>
+
         <article>
-            <div>
-                <h1>Introdução</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum quasi consectetur rem veniam rerum temporibus?</p>
+            <div class="pri">
+                <h2>Titulo 2</h2>
+                <p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, aut? Dolorem, voluptas rerum. Ab ipsam nam, iste rem quo laudantium! Soluta laboriosam nisi suscipit error pariatur nemo necessitatibus totam voluptate? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores nobis fuga eveniet quo ducimus ab recusandae sapiente corporis rem consectetur? Unde, perferendis delectus aperiam illo a dolor sit obcaecati enim.</p>
+                <img src="imagens/pexels-eleonora-sky-12168839.jpg" alt="eleonora">
             </div>
 
-            <h2>Titulo 2</h2>
-            <p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, aut? Dolorem, voluptas rerum. Ab ipsam nam, iste rem quo laudantium! Soluta laboriosam nisi suscipit error pariatur nemo necessitatibus totam voluptate? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores nobis fuga eveniet quo ducimus ab recusandae sapiente corporis rem consectetur? Unde, perferendis delectus aperiam illo a dolor sit obcaecati enim.</p>
-            <img src="" alt="">
-        
-            <h2>Titulo 3</h2>
-            <p id="p2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt ab tenetur impedit doloremque vitae rerum possimus accusantium deserunt deleniti, odit quaerat velit aliquam at qui magnam pariatur corporis similique expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta obcaecati, fugit repudiandae minima veritatis quas beatae hic sapiente natus ullam alias nobis consequuntur eveniet? Non dolorem adipisci iste error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempora cumque incidunt fuga cum ullam aperiam amet tenetur esse, illum sit quidem assumenda, dolorem nostrum, unde delectus dolorum quia. Vitae!</p>
-            <img src="" alt="">
-        
-            <h2>Titulo 4</h2>
-            <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex provident error rerum. Laboriosam veniam provident aliquid mollitia ut ipsa, ipsam, facere obcaecati voluptatem distinctio modi aut sit assumenda eveniet.</p>
-            <img src="" alt="">
+            <div class="seg">
+                <h2>Titulo 3</h2>
+                <p id="p2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt ab tenetur impedit doloremque vitae rerum possimus accusantium deserunt deleniti, odit quaerat velit aliquam at qui magnam pariatur corporis similique expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta obcaecati, fugit repudiandae minima veritatis quas beatae hic sapiente natus ullam alias nobis consequuntur eveniet? Non dolorem adipisci iste error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempora cumque incidunt fuga cum ullam aperiam amet tenetur esse, illum sit quidem assumenda, dolorem nostrum, unde delectus dolorum quia. Vitae!</p>
+                <img src="imagens/pexels-amina-filkins-5414032.jpg" alt="amina">
+            </div>
+
+            <div class="ter">
+                <h2>Titulo 4</h2>
+                <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex provident error rerum. Laboriosam veniam provident aliquid mollitia ut ipsa, ipsam, facere obcaecati voluptatem distinctio modi aut sit assumenda eveniet.</p>
+                <img class="imgter" src="imagens/pexels-studio-naae-8537452.jpg" alt="studio">
+            </div>
         </article>
     </main>
+
     <footer>
         <p>Site criado por <strong>Breno Lamas</strong> para fins de estudo</p>
     </footer>
