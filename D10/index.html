@@ -16,13 +16,14 @@
             --cor4: #757F5D;
             --cor5: #A5B287;
 
-            --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-            --fonte-conteudo: Raleway;
+            --fonte-conteudo: Raleway, Arial, Verdana, Helvetica, sans-serif;
         }
         * {
             margin: 0px;
             padding: 0px;
         }
+
+/*Cabeçalho*/
 
         header {
             width: auto;
@@ -66,91 +67,43 @@
             transition: 0.5s;
         }
 
-        /*Fazer um hover invertendo a palheta de cores do texto com o bakground mantendo efeito de gradiente*/
+/*Corpo*/
 
         main {
+            height: 100%;
             background-color: var(--cor2);
             background-image: url(imagens/fundo2.jpeg);
             background-attachment: fixed;
-            /*background-size: 1350px 900px;*/
-            background-size: 1320px 880px;
-            background-position: center;
+            background-size: cover;
+            background-position: center center;
             margin: auto;
-        }
-
-        article {
-            background-color: #000;
-            max-width: 800px;
-            min-width: 300px;
-            height: 100%;
-            margin: auto;
-            border-top: var(--cor0) solid;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.511);
-        }
-
-        div {
-            margin: auto;
-            padding: 0px;
-            width: 800px;
-            height: auto;
-        }
-
-        div h2 {
-            margin: 10px;
-            padding: 5px;
-            text-align: justify;
-            font-family: var(--fonte-conteudo);
-            font-weight: 400;
-            background-image: linear-gradient(to right, var(--cor3), var(--cor1),#0000006b);
-        }
-
-        div p {
-            margin: 10px;
-            text-align: justify;
-            text-indent: 50px;
-            font-family: var(--fonte-conteudo);
-            font-weight: thin;
-            width: 480px;
-            background-color: var(--cor2);
-            background-size: auto 300px;
-            border-radius: 5px;
-            padding: 10px;
-            box-shadow: 1px 1px 2px rgba(221,164,171,1);
+            padding-top: 10px;
         }
 
         div.intro {
-            width: auto;
-            height: 150px;
-            padding: 20px;
-        }
-
-        div.intro > h1 {
-            color: black;
+            margin: auto auto 10px auto;
+            padding: 10px;
+            background-color: #f1dddfb2;
             text-align: center;
-            margin: auto;
-            padding: 10px;
-            width: 250px;
-            height: 50px;
-            font-family: Raleway, Arial, Verdana, Helvetica, sans-serif;
-            font-weight: bold;
-            background-color: #F1DDDFd7;
-            border-radius: 5px;
-        }
-
-        div.intro > p {
-            color: black;
-            text-align: justify;
-            margin: 10px auto 5px;
-            padding: 10px;
-            font-family: Raleway, Arial, Verdana, Helvetica, sans-serif;
+            max-width: 900px;
+            min-width: 300px;
+            border-radius: 10px;
+            font-family: var(--fonte-conteudo);
             font-weight: normal;
-            background-color: #F1DDDFd7;
-            text-indent: 20px;
         }
 
-        div.intro > h1::after {
+        div.intro h1 {
+            margin-bottom: 10px;
+            font-family: var(--fonte-conteudo);
+            font-style: italic;
+            font-weight: bolder;
+        }
+
+        div.intro p {
+            font-weight: bold;
+        }
+
+        div.intro h1::after {
             background-image: url(imagens/flortitulo.png);
             background-size: 25px 32px;
             display: inline-block;
@@ -160,7 +113,7 @@
             content: "";
         }
 
-        div.intro > h1::before {
+        div.intro h1::before {
             background-image: url(imagens/flortitulo.png);
             background-size: 25px 32px;
             display: inline-block;
@@ -170,59 +123,79 @@
             content: "";
         }
 
-        div img {
-            width: 500px;
-            height: 333px;
-            margin: auto auto auto 10px;
+        article {
+            background-color: #000;
+            max-width: 900px;
+            min-width: 300px;
+            height: 100%auto;
+            margin: auto;
+            padding: 10px;
+            border-top: var(--cor0) solid;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.511);
+        }
+
+        article h2 {
+            color: var(--cor5);
+            font-family: var(--fonte-conteudo);
+            font-weight: normal;
+            text-align: justify;
+            background-image: linear-gradient(to right, var(--cor3), var(--cor1), #0000006b);
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        article p {
+            background-color: var(--cor2);
+            border-radius: 10px;
+            color: black;
+            font-family: var(--fonte-conteudo);
+            font-weight: thin;
+            text-align: justify;
+            text-indent: 50px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            background-color: var(--cor2);
+            color: black;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-family: var(--fonte-conteudo);
+            font-weight: thin;
+            list-style-position: inside;
+            padding: 10px;
+        }
+
+        li {
+            margin: 2px;
+        }
+
+        picture > img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        div.video {
+            background-color: #F1DDDF;
+            padding: 20px;
+            margin: 10px -10px 20px -10px;
+            padding-bottom: 57%;
             position: relative;
-            border-radius: 5px;
         }
 
-        div img.imgter {
-            width: 240px;
-            height: 320px;
-            border-radius: 5px;
-            margin: auto auto 5px 10px;
+        div.video iframe {
+            position: absolute;
+            top: 5.5%;
+            left: 3.5%;
+            width: 93%;
+            height: 89%;
         }
 
-        /*div.pri p::before {
-            background-image: url(imagens/pexels-eleonora-sky-12168839.jpg);
-            background-size: 200px 133px;
-            display: inline-block;
-            width: 200px;
-            height: 133px;
-            margin-left: 10px;
-            content: "";
-            text-indent: 20px;
-        }*/
-
-        /*div.seg p::after {
-            background-image: url(imagens/pexels-amina-filkins-5414032.jpg);
-            background-size: 200px 133px;
-            display: inline-block;
-            width: 200px;
-            height: 133px;
-            margin-left: 10px;
-            content: "";
-            text-indent: 20px;
-        }*/
-
-        /*div.ter p::before {
-            background-image: url(imagens/pexels-studio-naae-8537452.jpg);
-            background-size: 200px 267px;
-            display: inline-block;
-            width: 200px;
-            height: 267px;
-            margin-left: 10px;
-            content: "";
-            text-indent: 20px;
-        }*/
-
-        h2 {
-            color: var(--cor0);
-            font-family: Raleway;
-            font-weight: bold;
-        }
+/*Rodapé*/
 
         footer {
             background-color: #000;
@@ -250,7 +223,7 @@
 </head>
 <body>
     <header>
-        <h1>Teste de background image</h1>
+        <h1>Simplesmente Lírios</h1>
         <nav>
             <a href="#">Home</a>
             <a href="#">Notícias</a>
@@ -261,27 +234,35 @@
 
     <main>
         <div class="intro">
-            <h1>Introdução</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum quasi consectetur rem veniam rerum temporibus?</p>
+            <h1>Lilium speciosum</h1>
+            <p>Os lírios (comumente açucenas, em português europeu) são as flores do gênero Lilium L. da família Liliaceae, originárias do hemisfério norte com ocorrências na Europa, Ásia, América do Norte, e América do Sul. Mais da metade das espécies são encontradas na China e no Japão.</p>
         </div>
 
         <article>
-            <div class="pri">
-                <h2>Titulo 2</h2>
-                <p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, aut? Dolorem, voluptas rerum. Ab ipsam nam, iste rem quo laudantium! Soluta laboriosam nisi suscipit error pariatur nemo necessitatibus totam voluptate? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores nobis fuga eveniet quo ducimus ab recusandae sapiente corporis rem consectetur? Unde, perferendis delectus aperiam illo a dolor sit obcaecati enim.</p>
-                <img src="imagens/pexels-eleonora-sky-12168839.jpg" alt="eleonora">
-            </div>
-
-            <div class="seg">
-                <h2>Titulo 3</h2>
-                <p id="p2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt ab tenetur impedit doloremque vitae rerum possimus accusantium deserunt deleniti, odit quaerat velit aliquam at qui magnam pariatur corporis similique expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta obcaecati, fugit repudiandae minima veritatis quas beatae hic sapiente natus ullam alias nobis consequuntur eveniet? Non dolorem adipisci iste error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempora cumque incidunt fuga cum ullam aperiam amet tenetur esse, illum sit quidem assumenda, dolorem nostrum, unde delectus dolorum quia. Vitae!</p>
-                <img src="imagens/pexels-amina-filkins-5414032.jpg" alt="amina">
-            </div>
-
-            <div class="ter">
-                <h2>Titulo 4</h2>
-                <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex provident error rerum. Laboriosam veniam provident aliquid mollitia ut ipsa, ipsam, facere obcaecati voluptatem distinctio modi aut sit assumenda eveniet.</p>
-                <img class="imgter" src="imagens/pexels-studio-naae-8537452.jpg" alt="studio">
+            <h2>Características</h2>
+            <p>As plantas atingem, normalmente, de 1,20 a 2 metros de altura. Várias espécies de lírios também recebem o nome de açucena. Lírio é também a denominação genérica de várias plantas da família das Liliáceas e Amarilidáceas.
+            </p>
+            <ul>
+                <li>Lírio-do-amazonas - Eucharis x grandiflora, Eucharis amazonica. Também conhecido como Estrela Dalva, Estrela de Belém ou Estrela da Anunciação, espécie largamente cultivada no mundo inteiro;</li>
+                <li>Lírio-da-chuva - Zephyranthes rosea, Zephyranthes candida, Zephyranthes sylvestris..., todas largamente cultivadas no mundo inteiro;</li>
+                <li>Lírio-tigrado que é um lírio híbrido e várias outras espécies de lírios.</li>
+            </ul>
+            <picture>
+                <source media="(max-width: 600px)" srcset="imagens/eleonora-pq.jpg" type="image/jpeg">
+                <img src="imagens/eleonora.jpg" alt="eleonora">
+            </picture>
+        
+            <h2>Significado</h2>
+            <p>Na Igreja Católica, o lírio é símbolo da Virgem Maria. São Bernardo, no século XII, associa a Santíssima Virgem com a amada do Cântico dos Cânticos: “eu sou o lírio dos vales” (Ct 2, 1). O próprio personagem amado deste livro, que o cristianismo comumente aplica a Jesus Cristo e, em extensão, a Deus, também chama a Amada, lírio: “Como o lírio entre os espinheiros é minha amada entre as jovens” (Ct 2,2); ainda de acordo com São Bernardo, a Virgem Maria é “lírio de castidade inviolada”: A brancura da flor reflete a pureza daquela que é imaculada desde sua concepção, e as três pétalas simbolizam a tríplice virgindade da Mãe de Deus, antes, durante e após o parto. Por esta razão, abundam representações artísticas do lírio em obras da Anunciação. De acordo com Santa Gertrudes, o símbolo trinitário do lírio também reflete a ação tripla de Deus na “cheia de graça”: Maria é o lírio branco da Trindade, pois é filha do Pai, mãe do Filho, e esposa do Espírito Santo. Devido a esta revelação, católicos tradicionalistas invocam a Virgem Maria com a saudação: Salve Lírio Branco da Trindade, Rosa brilhante que embeleza o céu! </br>Na corrente de pensamento chinês Feng Shui, os lírios representam o verão e a fartura, e significam o amor eterno e também significam a pureza.</p>
+            <picture>
+                <source media="(max-width: 600px)" srcset="imagens/studio-pq.jpg" type="image/jpeg">
+                <img class="imgter" src="imagens/studio.jpg" alt="studio">
+            </picture>
+        
+            <h2>Crescimento de uma flor de Lírio rosa</h2>
+            <p>Time-lapse de uma planta de lírio oriental crescendo de um bulbo a flores durante 95 dias. O bulbo de lírio foi plantado em um vaso com solo misturado para vasos. Brotou depois de uma semana e crescendo lentamente. Os botões florais apareceram por volta do dia 48 e floresceram por volta do dia 80. A planta era pequena, mas suas flores eram enormes e lindas com uma cor rosa brilhante.</p>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rbBm4RgtVSA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </article>
     </main>
