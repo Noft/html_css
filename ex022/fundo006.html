@@ -12,15 +12,28 @@
         }
         body {
             height: 100vh;/* unidade vh é o view height que significa a altura da área visivel*/
+            /*
             background-color: black;
             background-image: url(imagens/wallpaper002.jpg);
             background-position: center top;
-            background-repeat: no-repeat;
-            background-size: cover;/*backgroud size padrão se não especificado é o auto*//*Parâmetro contain indica que a imagem vai sempre ficar contida na área visivel mantendo suas proporções*/
+            background-repeat: no-repeat;*/
+            background-size: cover;
+            /*backgroud size padrão se não especificado é o auto*//*Parâmetro contain indica que a imagem vai sempre ficar contida na área visivel mantendo suas proporções*/
+            /*
+            background-attachment: fixed;
+            */
+            /*Padrão scroll*/
+            
+            /*
+            Shorthand - background
+            color > image > position > repeat > [size] > attachment
+            */
+
+            background: black url(imagens/wallpaper002.jpg) no-repeat center center fixed ;
         }
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
