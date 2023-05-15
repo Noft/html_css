@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#tela {
+            width: 95vw;
+            height: 400px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis odit inventore deleniti explicabo commodi possimus repudiandae porro perspiciatis eligendi, natus corporis dignissimos et qui, aliquid, itaque autem! Dolore, tempora sapiente.</p>
+
+    <ul>
+        <li><a href="paginas extras/pag001.html" target="frame">Primeira página</a></li>
+        <li><a href="paginas extras/pag002.htm" target="frame">Segunda página</a></li>
+        <li><a href="paginas extras/pag003.html" target="frame">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad assumenda nostrum officiis veniam possimus natus, dolores at distinctio tenetur repudiandae maiores, velit iure similique libero molestiae ipsum repellendus, quisquam praesentium!</p>
+
+    <iframe id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, debitis fugit dicta exercitationem nostrum, magni ut nulla necessitatibus non rerum maiores ipsa doloremque cum delectus illo blanditiis tenetur consequuntur aut?</p><img style='width:100px; height:100px' src='imagens/google.png'>">Infelizmente seu navegador não é compatível com isso.
+    </iframe><!--Importante que o código que necessita de aspas e for inserido entre aspas duplas deve conter aspas simples asism como na tag img dentro do parâmetro srcdoc-->
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi id dolores accusantium aspernatur culpa. Accusamus neque, laboriosam dolorum deserunt minus tempore. Similique veniam saepe, aliquam cumque aut perspiciatis natus dicta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum fugiat at veritatis dolorem distinctio laudantium. Voluptatibus, quisquam dignissimos? Aspernatur debitis saepe sequi voluptatem in eius suscipit at asperiores libero iusto.</p>
+</body>
+</html>

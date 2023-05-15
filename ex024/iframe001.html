@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de iframe</title>
+    <style>
+        iframe {
+            width: 400px;
+            height: 400px;
+        }/*Para os iframes as configurações CSS prevalecem sobre os parâmetros informados no iframe*/
+    </style>
+</head>
+<body>
+    <h1>Testando o uso de um iframe</h1>
+    <p>Acessando o site do
+        <!--Tamanho padrão 300x150px--> 
+        <iframe src="https://www.cursoemvideo.com" frameborder="0" height="500px" scrolling="no">
+            <a href="https://www.cursoemvideo.com" target="_blank">Surso em Video</a>
+        </iframe>
+        <!--O iframe é um elemento inline-->
+        <!--O frameborder="0" é um parâmetro que remove a borda padrõa do iframe-->
+    para aprender a programas.</p>
+    <p>O repositório do Guanabara
+        <iframe src="https://gustavoguanabara.github.io" frameborder="0" height="500px" width="500px">
+            <a href="https://gustavoguanabara.github.io" target="_blank">Github</a>
+        </iframe><!--A informação entre a tag iframe aparece caso o link informado não funcionar-->
+    também é muito legal!</p>
+</body>
+</html>
