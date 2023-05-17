@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário.</h1>
+    <form action="cadastro.php" autocomplete="off"><!--Remove as sugestões para auto completar os campos do formulário--><!--O parâmetro action informa o arquivo para o qual os dados do formulário devem ser enviados após clicar no botão com função submit-->
+        <p><label for="inome">Nome:</label><!--Utilizamos a tag label para informar que o titulo apresentado está relacionado com o respectivo campo informando o id atribuido-->
+            <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form><!--O parâmetro name da tag input é mais utilizado pelo html e php como identificador enquanto o campo id é mias utilizado pelo javascript-->
+</body>
+</html>
