@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1>Meu primeiro formulário.</h1>
-    <form action="cadastro.php" autocomplete="off"><!--Remove as sugestões para auto completar os campos do formulário--><!--O parâmetro action informa o arquivo para o qual os dados do formulário devem ser enviados após clicar no botão com função submit-->
+    <form action="cadastro.php" method="post" autocomplete="off"><!--Remove as sugestões para auto completar os campos do formulário--><!--O parâmetro action informa o arquivo para o qual os dados do formulário devem ser enviados após clicar no botão com função submit--><!--Por padrõa o metodo de envio é o GET-->
         <p><label for="inome">Nome:</label><!--Utilizamos a tag label para informar que o titulo apresentado está relacionado com o respectivo campo informando o id atribuido-->
             <input type="text" name="nome" id="inome"></p>
         <p><label for="isobrenome">Sobrenome:</label> 
