@@ -36,6 +36,9 @@ section#login {
     border-radius: 20px;
     overflow: hidden;/*Impões que tudo dentro dessa section que ultrapasse o limite de suas dimensões seja escondido*/
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.475);
+
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
 }
 
 section#login > div#imagem {
